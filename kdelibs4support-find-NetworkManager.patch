@@ -1,0 +1,11 @@
+--- kdelibs4support-4.99.0/CMakeLists.txt.omv~	2014-05-24 17:54:32.292033510 +0200
++++ kdelibs4support-4.99.0/CMakeLists.txt	2014-05-24 17:54:42.545834905 +0200
+@@ -4,7 +4,7 @@ project(KDELibs4Support)
+ 
+ find_package(ECM 0.0.13 REQUIRED NO_MODULE)
+ 
+-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake )
++set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
+ 
+ include(KDEInstallDirs)
+ include(KDEFrameworkCompilerSettings)
