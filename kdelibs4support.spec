@@ -5,7 +5,7 @@
 
 Name: kdelibs4support
 Version: 5.0.0
-Release: 1
+Release: 2
 Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: Porting aid from KDELibs4
 URL: http://kde.org/
@@ -62,6 +62,26 @@ Porting aid from KDELibs4
 Summary: Development files for the KDE Frameworks 5 Delibs4support library
 Group: Development/KDE and Qt
 Requires: %{libname} = %{EVRD}
+# List of dependencies is from KF5KDELibs4SupportConfig.cmake (search for find_dependency)
+Requires: cmake(KF5Auth)
+Requires: cmake(KF5ConfigWidgets)
+Requires: cmake(KF5CoreAddons)
+Requires: cmake(KF5Crash)
+Requires: cmake(KF5DesignerPlugin)
+Requires: cmake(KF5DocTools)
+Requires: cmake(KF5Emoticons)
+Requires: cmake(KF5GuiAddons)
+Requires: cmake(KF5IconThemes)
+Requires: cmake(KF5ItemModels)
+Requires: cmake(KF5Init)
+Requires: cmake(KF5Notifications)
+Requires: cmake(KF5Parts)
+Requires: cmake(KF5TextWidgets)
+Requires: cmake(KF5UnitConversion)
+Requires: cmake(KF5WindowSystem)
+Requires: cmake(Qt5DBus)
+Requires: cmake(Qt5Xml)
+Requires: cmake(Qt5PrintSupport)
 
 %description -n %{devname}
 Development files for the KDE Frameworks 5 Delibs4support library
