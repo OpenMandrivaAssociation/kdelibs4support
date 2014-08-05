@@ -5,7 +5,7 @@
 
 Name: kdelibs4support
 Version: 5.0.0
-Release: 2
+Release: 3
 Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: Porting aid from KDELibs4
 URL: http://kde.org/
@@ -96,6 +96,12 @@ ninja -C build
 
 %install
 DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
+
+# The version of FindGettext.cmake included here is obsolete and broken
+# (causes Baloo build to fail).
+# Since we get a working version from cmake itself, we can and should
+# just remove it.
+rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
 
 %files
 %{_sysconfdir}/xdg/colors
