@@ -4,7 +4,7 @@
 %define debug_package %{nil}
 
 Name: kdelibs4support
-Version: 5.1.0
+Version: 5.3.0
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: Porting aid from KDELibs4
@@ -14,6 +14,7 @@ Group: System/Libraries
 BuildRequires: cmake
 BuildRequires: qmake5
 BuildRequires: extra-cmake-modules5
+BuildRequires: qt5-designer
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(OpenSSL)
