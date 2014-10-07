@@ -98,13 +98,15 @@ ninja -C build
 %install
 DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
 
+%find_lang kdelibs4support
+
 # The version of FindGettext.cmake included here is obsolete and broken
 # (causes Baloo build to fail).
 # Since we get a working version from cmake itself, we can and should
 # just remove it.
 rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
 
-%files
+%files -f kdelibs4support.lang
 %{_sysconfdir}/xdg/colors
 %{_sysconfdir}/xdg/kdebug*
 %{_sysconfdir}/xdg/ksslcalist
@@ -114,7 +116,6 @@ rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
 %{_datadir}/kf5/locale
 %{_datadir}/kf5/widgets/pics/*
 %{_datadir}/locale/kf5_all_languages
-%{_datadir}/locale/*/kf5_entry.desktop
 %{_libdir}/libexec/kf5/*
 %{_libdir}/plugins/*.so
 %{_libdir}/plugins/designer/*.so
