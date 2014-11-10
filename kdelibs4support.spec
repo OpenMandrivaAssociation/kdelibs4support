@@ -2,11 +2,12 @@
 %define libname %mklibname KF5KDELibs4Support %{major}
 %define devname %mklibname KF5KDELibs4Support -d
 %define debug_package %{nil}
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdelibs4support
-Version: 5.3.0
+Version: 5.4.0
 Release: 1
-Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/%{name}-%{version}.tar.xz
+Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Summary: Porting aid from KDELibs4
 URL: http://kde.org/
 License: GPL
@@ -126,6 +127,16 @@ rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
 %{_datadir}/kf5/kssl
 %{_mandir}/man1/*
 %doc %{_docdir}/HTML/en/kdebugdialog5
+%lang(de) %doc %{_docdir}/HTML/de/kdebugdialog5
+%lang(nl) %doc %{_docdir}/HTML/nl/kdebugdialog5
+%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kdebugdialog5
+%lang(sv) %doc %{_docdir}/HTML/sv/kdebugdialog5
+%lang(uk) %doc %{_docdir}/HTML/uk/kdebugdialog5
+%lang(de) %{_mandir}/de/man1/*
+%lang(nl) %{_mandir}/nl/man1/*
+%lang(pt_BR) %{_mandir}/pt_BR/man1/*
+%lang(sv) %{_mandir}/sv/man1/*
+%lang(uk) %{_mandir}/uk/man1/*
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}
