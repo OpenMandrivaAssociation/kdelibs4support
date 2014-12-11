@@ -91,13 +91,14 @@ Development files for the KDE Frameworks 5 Delibs4support library
 %prep
 %setup -q
 %apply_patches
-%cmake -G Ninja
+%cmake -G Ninja \
+	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %build
 ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
+DESTDIR="%{buildroot}" ninja -C build install
 
 %find_lang kdelibs4support
 
@@ -118,10 +119,10 @@ rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
 %{_datadir}/kf5/widgets/pics/*
 %{_datadir}/locale/kf5_all_languages
 %{_libdir}/libexec/kf5/*
-%{_libdir}/plugins/*.so
-%{_libdir}/plugins/designer/*.so
-%{_libdir}/plugins/kf5/kded/*.so
-%{_libdir}/plugins/kf5/kio/*.so
+%{_libdir}/qt5/plugins/*.so
+%{_libdir}/qt5/plugins/designer/*.so
+%{_libdir}/qt5/plugins/kf5/kded/*.so
+%{_libdir}/qt5/plugins/kf5/kio/*.so
 %{_datadir}/dbus-1/*/*
 %{_datadir}/kf5/kdoctools/*
 %{_datadir}/kf5/kssl
