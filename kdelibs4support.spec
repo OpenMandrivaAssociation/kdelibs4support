@@ -16,12 +16,20 @@ BuildRequires: cmake
 BuildRequires: qmake5
 BuildRequires: extra-cmake-modules5
 BuildRequires: qt5-designer
+BuildRequires: pkgconfig(Qt5Concurrent)
 BuildRequires: pkgconfig(Qt5Core)
+BuildRequires: pkgconfig(Qt5DBus)
+BuildRequires: pkgconfig(Qt5Designer)
+BuildRequires: pkgconfig(Qt5Gui)
+BuildRequires: pkgconfig(Qt5Network)
+BuildRequires: pkgconfig(Qt5PrintSupport)
+BuildRequires: pkgconfig(Qt5Svg)
+BuildRequires: pkgconfig(Qt5Test)
+BuildRequires: pkgconfig(Qt5Widgets)
+BuildRequires: pkgconfig(Qt5X11Extras)
+BuildRequires: pkgconfig(Qt5Xml)
 BuildRequires: cmake(KF5DocTools)
-BuildRequires: cmake(OpenSSL)
-BuildRequires: cmake(Qt5X11Extras)
 BuildRequires: cmake(ECM)
-BuildRequires: cmake(Qt5)
 BuildRequires: cmake(KF5Completion)
 BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5ConfigWidgets)
@@ -42,10 +50,11 @@ BuildRequires: cmake(KF5UnitConversion)
 BuildRequires: cmake(KF5WidgetsAddons)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5XmlGui)
-BuildRequires: cmake(Qt5)
+BuildRequires: pkgconfig(openssl)
 BuildRequires: pkgconfig(sm)
 BuildRequires: pkgconfig(NetworkManager)
 BuildRequires: pkgconfig(libnm-util)
+BuildRequires: pkgconfig(x11)
 BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
