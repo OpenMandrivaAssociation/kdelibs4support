@@ -55,6 +55,7 @@ BuildRequires: pkgconfig(sm)
 BuildRequires: pkgconfig(NetworkManager)
 BuildRequires: pkgconfig(libnm-util)
 BuildRequires: pkgconfig(x11)
+BuildRequires: perl(URI::Escape)
 BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
