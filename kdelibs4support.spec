@@ -12,9 +12,6 @@ Summary: Porting aid from KDELibs4
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
-BuildRequires: cmake
-BuildRequires: qmake5
-BuildRequires: extra-cmake-modules5
 BuildRequires: qt5-designer
 BuildRequires: pkgconfig(Qt5Concurrent)
 BuildRequires: pkgconfig(Qt5Core)
@@ -57,11 +54,10 @@ BuildRequires: pkgconfig(libnm-util)
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(libntrack)
 BuildRequires: perl(URI::Escape)
-BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
 %description
-Porting aid from KDELibs4
+Porting aid from KDELibs4.
 
 %package -n %{libname}
 Summary: Porting aid from KDELibs4
@@ -69,7 +65,7 @@ Group: System/Libraries
 Requires: %{name} = %{EVRD}
 
 %description -n %{libname}
-Porting aid from KDELibs4
+Porting aid from KDELibs4.
 
 %package -n %{devname}
 Summary: Development files for the KDE Frameworks 5 Delibs4support library
@@ -97,19 +93,17 @@ Requires: cmake(Qt5Xml)
 Requires: cmake(Qt5PrintSupport)
 
 %description -n %{devname}
-Development files for the KDE Frameworks 5 Delibs4support library
+Development files for the KDE Frameworks 5 Delibs4support library.
 
 %prep
 %setup -q
 %apply_patches
-%cmake -G Ninja \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
-
+%cmake_kde5
 %build
-ninja -C build
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja -C build install
+%ninja_install -C build
 
 %find_lang kdelibs4support
 
