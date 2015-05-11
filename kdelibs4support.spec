@@ -134,17 +134,19 @@ rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
 %{_datadir}/kf5/kssl
 %{_mandir}/man1/*
 %doc %{_docdir}/HTML/en/kdebugdialog5
+%lang(ca) %doc %{_docdir}/HTML/ca/kdebugdialog5
 %lang(de) %doc %{_docdir}/HTML/de/kdebugdialog5
 %lang(nl) %doc %{_docdir}/HTML/nl/kdebugdialog5
 %lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kdebugdialog5
 %lang(sv) %doc %{_docdir}/HTML/sv/kdebugdialog5
 %lang(uk) %doc %{_docdir}/HTML/uk/kdebugdialog5
+%lang(ca) %{_mandir}/ca/man1/*
 %lang(de) %{_mandir}/de/man1/*
 %lang(nl) %{_mandir}/nl/man1/*
 %lang(pt_BR) %{_mandir}/pt_BR/man1/*
 %lang(sv) %{_mandir}/sv/man1/*
 %lang(uk) %{_mandir}/uk/man1/*
-
+    
 %files -n %{libname}
 %{_libdir}/*.so.%{major}
 %{_libdir}/*.so.%{version}
