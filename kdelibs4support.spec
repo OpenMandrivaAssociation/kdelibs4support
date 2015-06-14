@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdelibs4support
-Version: 5.10.0
+Version: 5.11.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Summary: Porting aid from KDELibs4
@@ -146,7 +146,7 @@ rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
 %lang(pt_BR) %{_mandir}/pt_BR/man1/*
 %lang(sv) %{_mandir}/sv/man1/*
 %lang(uk) %{_mandir}/uk/man1/*
-    
+
 %files -n %{libname}
 %{_libdir}/*.so.%{major}
 %{_libdir}/*.so.%{version}
