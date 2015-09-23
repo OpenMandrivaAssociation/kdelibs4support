@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kdelibs4support-5.13.0.tar.xz: 928a9b65f14f308d967ff56b08784951969976d8
+sources:
+  kdelibs4support-5.14.0.tar.xz: 615e96360453a78c43e26fbfb5b52ee44f9e8fc5
