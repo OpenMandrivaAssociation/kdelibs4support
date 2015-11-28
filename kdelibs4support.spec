@@ -99,7 +99,7 @@ Development files for the KDE Frameworks 5 Delibs4support library.
 %setup -q
 %apply_patches
 # (tpg) fix some strange bug on i586
-%ifarch %{xi86}
+%ifarch %{ix86}
 %define optflags %optflags -Wno-c++11-narrowing
 %endif
 
