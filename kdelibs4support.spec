@@ -6,7 +6,7 @@
 
 Name: kdelibs4support
 Version: 5.16.0
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Summary: Porting aid from KDELibs4
 URL: http://kde.org/
@@ -47,6 +47,7 @@ BuildRequires: cmake(KF5UnitConversion)
 BuildRequires: cmake(KF5WidgetsAddons)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5XmlGui)
+BuildRequires: docbook-dtd45-xml
 BuildRequires: pkgconfig(openssl)
 BuildRequires: pkgconfig(sm)
 BuildRequires: pkgconfig(NetworkManager)
