@@ -6,7 +6,7 @@
 
 Name: kdelibs4support
 Version: 5.16.0
-Release: 3
+Release: 4
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Summary: Porting aid from KDELibs4
 URL: http://kde.org/
@@ -124,6 +124,7 @@ rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
 %{_sysconfdir}/xdg/colors
 %{_sysconfdir}/xdg/kdebug*
 %{_sysconfdir}/xdg/ksslcalist
+%{_bindir}/kf5-config
 %{_bindir}/kdebugdialog5
 %{_datadir}/kservices5/*
 %{_datadir}/kservicetypes5/*
@@ -135,7 +136,6 @@ rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
 %{_libdir}/qt5/plugins/designer/*.so
 %{_libdir}/qt5/plugins/kf5/kded/*.so
 %{_libdir}/qt5/plugins/kf5/kio/*.so
-%{_datadir}/dbus-1/*/*
 %{_datadir}/kf5/kdoctools/*
 %{_datadir}/kf5/kssl
 %{_mandir}/man1/*
@@ -159,8 +159,8 @@ rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
 %{_libdir}/*.so.%{version}
 
 %files -n %{devname}
-%{_bindir}/kf5-config
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/cmake/KDELibs4
 %{_libdir}/cmake/KF5*
+%{_datadir}/dbus-1/*/*
