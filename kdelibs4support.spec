@@ -145,6 +145,8 @@ rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
 %lang(de) %doc %{_docdir}/HTML/de/kdebugdialog5
 %lang(nl) %doc %{_docdir}/HTML/nl/kdebugdialog5
 %lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kdebugdialog5
+%lang(sr) %doc %{_docdir}/HTML/sr/kdebugdialog5
+%lang(sr@latin) %doc %{_docdir}/HTML/sr@latin/kdebugdialog5
 %lang(sv) %doc %{_docdir}/HTML/sv/kdebugdialog5
 %lang(uk) %doc %{_docdir}/HTML/uk/kdebugdialog5
 %lang(uk) %doc %{_docdir}/HTML/en/kcontrol
