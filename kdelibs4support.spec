@@ -6,7 +6,7 @@
 
 Name: kdelibs4support
 Version: 5.18.0
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source1: %{name}.rpmlintrc
 Summary: Porting aid from KDELibs4
@@ -56,7 +56,9 @@ BuildRequires: pkgconfig(libnm-util)
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(libntrack)
 BuildRequires: perl(URI::Escape)
+BuildRequires: rootcerts
 Requires: %{libname} = %{EVRD}
+Requires: rootcerts
 
 %description
 Porting aid from KDELibs4.
@@ -120,6 +122,12 @@ Development files for the KDE Frameworks 5 Delibs4support library.
 # Since we get a working version from cmake itself, we can and should
 # just remove it.
 rm -f %{buildroot}%{_libdir}/cmake/KF5KDELibs4Support/FindGettext.cmake
+
+## use ca-certificates' ca-bundle.crt, symlink as what most other
+## distros do these days (http://bugzilla.redhat.com/521902)
+if [  -f %{buildroot}%{_kde5_datadir}/kf5/kssl/ca-bundle.crt -a -f /etc/pki/tls/certs/ca-bundle.crt ]; then
+    ln -sf /etc/pki/tls/certs/ca-bundle.crt %{buildroot}%{_kde5_datadir}/kf5/kssl/ca-bundle.crt
+fi
 
 %files -f kdelibs4support.lang
 %{_sysconfdir}/xdg/colors
