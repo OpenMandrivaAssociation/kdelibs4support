@@ -156,7 +156,6 @@ fi
 %lang(sr@latin) %doc %{_docdir}/HTML/sr@latin/kdebugdialog5
 %lang(sv) %doc %{_docdir}/HTML/sv/kdebugdialog5
 %lang(uk) %doc %{_docdir}/HTML/uk/kdebugdialog5
-/usr/share/doc/HTML/ca/kcontrol/kcm_ssl/index.cache.bz2
 %lang(ca) %doc %{_docdir}/HTML/ca/kcontrol
 %lang(de) %doc %{_docdir}/HTML/de/kcontrol
 %lang(en) %doc %{_docdir}/HTML/en/kcontrol
