@@ -49,7 +49,9 @@ BuildRequires: cmake(KF5WidgetsAddons)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5XmlGui)
 BuildRequires: docbook-dtd42-xml
+%if %mdvver > 3000000
 BuildRequires: pkgconfig(openssl)
+%endif
 BuildRequires: pkgconfig(sm)
 BuildRequires: pkgconfig(NetworkManager)
 BuildRequires: pkgconfig(libnm-util)
