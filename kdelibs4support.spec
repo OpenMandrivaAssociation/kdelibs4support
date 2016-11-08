@@ -49,7 +49,7 @@ BuildRequires: cmake(KF5WidgetsAddons)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5XmlGui)
 BuildRequires: docbook-dtd42-xml
-%if %mdvver > 3000000
+%if %mdvver < 3000001
 BuildRequires: pkgconfig(openssl)
 %endif
 BuildRequires: pkgconfig(sm)
