@@ -9,7 +9,9 @@ Version: 5.27.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source1: %{name}.rpmlintrc
+%if %mdvver > 3000000
 Patch0: kdelibs4support-5.27.0-openssl-1.1.patch
+%endif
 Summary: Porting aid from KDELibs4
 URL: http://kde.org/
 License: GPL
