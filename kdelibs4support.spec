@@ -9,6 +9,7 @@ Version: 5.27.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source1: %{name}.rpmlintrc
+Patch0: kdelibs4support-5.27.0-openssl-1.1.patch
 Summary: Porting aid from KDELibs4
 URL: http://kde.org/
 License: GPL
@@ -17,7 +18,7 @@ BuildRequires: qt5-designer
 BuildRequires: pkgconfig(Qt5Concurrent)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5DBus)
-BuildRequires: pkgconfig(Qt5Designer)
+BuildRequires: cmake(Qt5Designer)
 BuildRequires: pkgconfig(Qt5Gui)
 BuildRequires: pkgconfig(Qt5Network)
 BuildRequires: pkgconfig(Qt5PrintSupport)
