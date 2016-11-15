@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdelibs4support
-Version: 5.27.0
+Version: 5.28.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source1: %{name}.rpmlintrc
@@ -161,6 +161,7 @@ fi
 %lang(uk) %doc %{_docdir}/HTML/uk/kdebugdialog5
 %lang(ca) %doc %{_docdir}/HTML/ca/kcontrol
 %lang(de) %doc %{_docdir}/HTML/de/kcontrol
+%lang(es) %doc %{_docdir}/HTML/es/kcontrol
 %lang(en) %doc %{_docdir}/HTML/en/kcontrol
 %lang(it) %doc %{_docdir}/HTML/it/kcontrol
 %lang(nl) %doc %{_docdir}/HTML/nl/kcontrol
@@ -169,6 +170,7 @@ fi
 %lang(uk) %doc %{_docdir}/HTML/uk/kcontrol
 %lang(ca) %{_mandir}/ca/man1/*
 %lang(de) %{_mandir}/de/man1/*
+%lang(es) %{_mandir}/es/man1/*
 %lang(it) %{_mandir}/it/man1/*
 %lang(nl) %{_mandir}/nl/man1/*
 %lang(pt_BR) %{_mandir}/pt_BR/man1/*
