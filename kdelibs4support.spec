@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdelibs4support
-Version: 5.28.0
+Version: 5.29.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source1: %{name}.rpmlintrc
@@ -156,18 +156,21 @@ fi
 %lang(nl) %doc %{_docdir}/HTML/nl/kdebugdialog5
 %lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kdebugdialog5
 %lang(sr) %doc %{_docdir}/HTML/sr/kdebugdialog5
+%lang(sr@latin) %doc %{_docdir}/HTML/sr@latin/kcontrol5
 %lang(sr@latin) %doc %{_docdir}/HTML/sr@latin/kdebugdialog5
 %lang(sv) %doc %{_docdir}/HTML/sv/kdebugdialog5
 %lang(uk) %doc %{_docdir}/HTML/uk/kdebugdialog5
-%lang(ca) %doc %{_docdir}/HTML/ca/kcontrol
-%lang(de) %doc %{_docdir}/HTML/de/kcontrol
-%lang(es) %doc %{_docdir}/HTML/es/kcontrol
-%lang(en) %doc %{_docdir}/HTML/en/kcontrol
-%lang(it) %doc %{_docdir}/HTML/it/kcontrol
-%lang(nl) %doc %{_docdir}/HTML/nl/kcontrol
-%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kcontrol
-%lang(sv) %doc %{_docdir}/HTML/sv/kcontrol
-%lang(uk) %doc %{_docdir}/HTML/uk/kcontrol
+%lang(ca) %doc %{_docdir}/HTML/ca/kcontrol5
+%lang(de) %doc %{_docdir}/HTML/de/kcontrol5
+%lang(es) %doc %{_docdir}/HTML/es/kcontrol5
+%lang(en) %doc %{_docdir}/HTML/en/kcontrol5
+%lang(it) %doc %{_docdir}/HTML/it/kcontrol5
+%lang(nb) %doc %{_docdir}/HTML/nb/kcontrol5
+%lang(nl) %doc %{_docdir}/HTML/nl/kcontrol5
+%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kcontrol5
+%lang(sr) %doc %{_docdir}/HTML/sr/kcontrol5
+%lang(sv) %doc %{_docdir}/HTML/sv/kcontrol5
+%lang(uk) %doc %{_docdir}/HTML/uk/kcontrol5
 %lang(ca) %{_mandir}/ca/man1/*
 %lang(de) %{_mandir}/de/man1/*
 %lang(es) %{_mandir}/es/man1/*
