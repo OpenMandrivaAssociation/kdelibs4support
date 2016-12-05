@@ -130,6 +130,9 @@ if [  -f %{buildroot}%{_kde5_datadir}/kf5/kssl/ca-bundle.crt -a -f /etc/pki/tls/
     ln -sf /etc/pki/tls/certs/ca-bundle.crt %{buildroot}%{_kde5_datadir}/kf5/kssl/ca-bundle.crt
 fi
 
+# Let's not conflict with kio...
+rm -f %{buildroot}%{_docdir}/HTML/*/kcontrol5/webshortcuts/index.cache.bz2
+
 %files -f kdelibs4support.lang
 %{_sysconfdir}/xdg/colors
 %{_sysconfdir}/xdg/kdebug*
