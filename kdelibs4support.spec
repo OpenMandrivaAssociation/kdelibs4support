@@ -152,6 +152,7 @@ rm -f %{buildroot}%{_docdir}/HTML/*/kcontrol5/webshortcuts/index.cache.bz2
 %doc %{_docdir}/HTML/en/kdebugdialog5
 %lang(ca) %doc %{_docdir}/HTML/ca/kdebugdialog5
 %lang(de) %doc %{_docdir}/HTML/de/kdebugdialog5
+%lang(es) %doc %{_docdir}/HTML/es/kdebugdialog5
 %lang(it) %doc %{_docdir}/HTML/it/kdebugdialog5
 %lang(nl) %doc %{_docdir}/HTML/nl/kdebugdialog5
 %lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kdebugdialog5
