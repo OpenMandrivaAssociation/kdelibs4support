@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdelibs4support
-Version: 5.33.0
+Version: 5.34.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source1: %{name}.rpmlintrc
@@ -158,6 +158,7 @@ rm -f %{buildroot}%{_docdir}/HTML/*/kcontrol5/webshortcuts/index.cache.bz2
 %lang(es) %doc %{_docdir}/HTML/es/kdebugdialog5
 %lang(it) %doc %{_docdir}/HTML/it/kdebugdialog5
 %lang(nl) %doc %{_docdir}/HTML/nl/kdebugdialog5
+%lang(pt) %doc %{_docdir}/HTML/pt/kdebugdialog5
 %lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kdebugdialog5
 %lang(sr) %doc %{_docdir}/HTML/sr/kdebugdialog5
 %lang(sr@latin) %doc %{_docdir}/HTML/sr@latin/kdebugdialog5
@@ -169,6 +170,7 @@ rm -f %{buildroot}%{_docdir}/HTML/*/kcontrol5/webshortcuts/index.cache.bz2
 %lang(en) %doc %{_docdir}/HTML/en/kcontrol5
 %lang(it) %doc %{_docdir}/HTML/it/kcontrol5
 %lang(nl) %doc %{_docdir}/HTML/nl/kcontrol5
+%lang(pt) %doc %{_docdir}/HTML/pt/kcontrol5
 %lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kcontrol5
 %lang(sv) %doc %{_docdir}/HTML/sv/kcontrol5
 %lang(uk) %doc %{_docdir}/HTML/uk/kcontrol5
@@ -177,6 +179,7 @@ rm -f %{buildroot}%{_docdir}/HTML/*/kcontrol5/webshortcuts/index.cache.bz2
 %lang(es) %{_mandir}/es/man1/*
 %lang(it) %{_mandir}/it/man1/*
 %lang(nl) %{_mandir}/nl/man1/*
+%lang(pt) %{_mandir}/pt/man1/*
 %lang(pt_BR) %{_mandir}/pt_BR/man1/*
 %lang(sv) %{_mandir}/sv/man1/*
 %lang(uk) %{_mandir}/uk/man1/*
