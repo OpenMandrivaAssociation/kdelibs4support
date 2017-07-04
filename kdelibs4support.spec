@@ -17,6 +17,7 @@ URL: http://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: qt5-designer
+BuildRequires: appstream
 BuildRequires: pkgconfig(Qt5Concurrent)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5DBus)
@@ -36,6 +37,7 @@ BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5ConfigWidgets)
 BuildRequires: cmake(KF5Crash)
 BuildRequires: cmake(KF5DesignerPlugin)
+BuildRequires: cmake(KF5Emoticons)
 BuildRequires: cmake(KF5GlobalAccel)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(KF5GuiAddons)
