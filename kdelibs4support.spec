@@ -50,6 +50,7 @@ BuildRequires: cmake(KF5UnitConversion)
 BuildRequires: cmake(KF5WidgetsAddons)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5XmlGui)
+BuildRequires: cmake(KF5DBusAddons)
 BuildRequires: docbook-dtd42-xml
 BuildRequires: pkgconfig(openssl)
 BuildRequires: pkgconfig(sm)
