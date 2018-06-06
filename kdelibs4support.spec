@@ -4,6 +4,9 @@
 %define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
+# We don't care about Windoze specific stuff...
+%global __requires_exclude ^cmake\\(KDEWin\\)$
+
 Name: kdelibs4support
 Version: 5.47.0
 Release: 1
