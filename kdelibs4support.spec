@@ -54,6 +54,7 @@ BuildRequires: cmake(KF5WidgetsAddons)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5XmlGui)
 BuildRequires: cmake(KF5DBusAddons)
+BuildRequires: cmake(KF5Completion)
 BuildRequires: docbook-dtd42-xml
 BuildRequires: pkgconfig(openssl)
 BuildRequires: pkgconfig(sm)
