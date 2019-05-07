@@ -9,7 +9,7 @@
 
 Name: kdelibs4support
 Version: 5.57.0
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source1: %{name}.rpmlintrc
 Summary: Porting aid from KDELibs4
@@ -73,7 +73,6 @@ Porting aid from KDELibs4.
 %package -n %{libname}
 Summary: Porting aid from KDELibs4
 Group: System/Libraries
-Requires: %{name} = %{EVRD}
 
 %description -n %{libname}
 Porting aid from KDELibs4.
@@ -81,6 +80,7 @@ Porting aid from KDELibs4.
 %package -n %{devname}
 Summary: Development files for the KDE Frameworks 5 Delibs4support library
 Group: Development/KDE and Qt
+Requires: %{name} = %{EVRD}
 Requires: %{libname} = %{EVRD}
 # List of dependencies is from KF5KDELibs4SupportConfig.cmake (search for find_dependency)
 Requires: cmake(KF5Auth)
