@@ -8,8 +8,8 @@
 %global __requires_exclude ^cmake\\(KDEWin\\)$
 
 Name: kdelibs4support
-Version: 5.64.0
-Release: 2
+Version: 5.65.0
+Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source1: %{name}.rpmlintrc
 Summary: Porting aid from KDELibs4
@@ -63,6 +63,8 @@ BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(libntrack)
 BuildRequires: perl(URI::Escape)
 BuildRequires: rootcerts
+# cmake files act up when running into obsolete-ish Qt5Declarative
+BuildConflicts:	pkgconfig(Qt5Declarative)
 Requires: %{libname} = %{EVRD}
 Requires: rootcerts
 
@@ -106,8 +108,7 @@ Requires: cmake(Qt5PrintSupport)
 Development files for the KDE Frameworks 5 Delibs4support library.
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 # (tpg) fix some strange bug on i586
 %global optflags %optflags -Wno-c++11-narrowing
 
