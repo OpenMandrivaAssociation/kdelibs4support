@@ -9,7 +9,7 @@
 
 Name: kdelibs4support
 Version: 5.67.0
-Release: 3
+Release: 4
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source1: %{name}.rpmlintrc
 Summary: Porting aid from KDELibs4
