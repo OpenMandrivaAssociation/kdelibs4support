@@ -1,0 +1,11 @@
+diff -up kdelibs4support-5.68.0/src/kdeui/k4style.cpp.omv~ kdelibs4support-5.68.0/src/kdeui/k4style.cpp
+--- kdelibs4support-5.68.0/src/kdeui/k4style.cpp.omv~	2020-03-22 19:56:16.772719998 +0100
++++ kdelibs4support-5.68.0/src/kdeui/k4style.cpp	2020-03-22 19:56:24.279617243 +0100
+@@ -57,6 +57,7 @@
+ #include <QLabel>
+ #include <QKeyEvent>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QScrollBar>
+ #include <QStyleOption>
+ 
