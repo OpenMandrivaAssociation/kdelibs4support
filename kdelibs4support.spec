@@ -12,7 +12,7 @@ Release: 2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 Source1: %{name}.rpmlintrc
 Summary: Porting aid from KDELibs4
-URL: http://kde.org/
+URL: https://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: qt5-designer
